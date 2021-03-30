@@ -1,8 +1,8 @@
 .grid_container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 7fr 1fr 1fr;
     grid-template-areas:
         "header header header"
         ". content ."
@@ -12,15 +12,13 @@
 }
 
 body {
-    background-color: white;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 14px;
+    font-family: arial, sans-serif;
 }
 
 li {
     display: inline;
+    padding: 10px;
 }
 
 .navbar {
@@ -29,6 +27,7 @@ li {
 
 .content {
     grid-area: content;
+    justify-self: center;
 }
 
 .footer_top {
@@ -41,8 +40,13 @@ li {
 
 .left_navbar {
     float: left;
+    justify-self: left;
+    margin-left: -20px
 }
 
 .right_navbar {
     float: right;
+    justify-self: right;
+    margin-right: 10px;
+    font-size: 13px;
 }
