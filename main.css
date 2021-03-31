@@ -1,19 +1,20 @@
-.grid_container {
+.grid-container {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 7fr 1fr 1fr;
+    grid-template-rows: 1fr 7fr 0.45fr 0.45fr;
     grid-template-areas:
         "header header header"
         ". content ."
-        "footer_top footer_top footer_top"
-        "footer_bottom footer_bottom footer_bottom"
+        "footer-top footer-top footer-top"
+        "footer-bottom footer-bottom footer-bottom"
     
 }
 
 body {
     font-size: 14px;
     font-family: arial, sans-serif;
+    margin: 0;
 }
 
 li {
@@ -30,23 +31,55 @@ li {
     justify-self: center;
 }
 
-.footer_top {
-    grid-area: footer_top;
+.footer-top {
+    grid-area: footer-top;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
+    border-bottom: 1px solid #dadce0
 }
 
-.footer_bottom {
-    grid-area: footer_bottom;
+.footer-bottom {
+    grid-area: footer-bottom;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
 }
 
-.left_navbar {
+.left-navbar {
     float: left;
     justify-self: left;
-    margin-left: -20px
+    margin-left: -20px;
+    margin-top: 10px;
+    justify-content: center;
+
 }
 
-.right_navbar {
+.right-navbar {
     float: right;
     justify-self: right;
     margin-right: 10px;
     font-size: 13px;
+    margin-top: 10px;
+}
+
+.left-footer {
+    margin-left: 15%
+}
+
+.right-footer {
+    margin-left: 15%;
+}
+
+.footer-element {
+    display: inline;
+    margin: 0px 10px 0px 10px;
+}
+
+#canada {
+    margin-left: 30px;
 }
